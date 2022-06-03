@@ -99,8 +99,8 @@ router.post('/', withAuth, (req, res) => {
 
 // PUT /api/posts/:id
 router.put('/:id', withAuth, (req, res) => {
-    // UPDATE post title
-    // expects {"title": "New Title"}
+    // UPDATE post title and text
+    // expects {"title": "New Title", "post_text": "new text"}
     Post.update(
         {
             title: req.body.title,
