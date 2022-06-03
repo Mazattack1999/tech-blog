@@ -6,8 +6,8 @@ const dashboardRoutes = require('./dashboard-routes');
 
 // middleware routes
 router.use('/api', apiRoutes);
-router.use('/', homeRoutes);
-router.use('/dashboard', dashboardRoutes);
+// router.use('/', homeRoutes);
+// router.use('/dashboard', dashboardRoutes);
 
 // send 404 error if route does not exist
 router.use((req, res) => {
