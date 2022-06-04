@@ -87,7 +87,7 @@ router.post('/login', (req, res) => {
     .then(dbUserData => {
         console.log(dbUserData);
         if (!dbUserData) {
-            res.status(400).json({ message: 'No user with that uername' });
+            res.status(400).json({ message: 'No user with that username' });
             return;
         }
         
@@ -105,7 +105,9 @@ router.post('/login', (req, res) => {
             req.session.username = dbUserData.username;
             req.session.loggedIn = true
 
+            // send user to home page when logged in
             res.json({ user: dbUserData, message: 'You are now logged in!' });
+            
         })
     });
 });

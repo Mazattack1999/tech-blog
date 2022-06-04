@@ -23,12 +23,14 @@ User.init(
         // define a username column
         username: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: false,
+            unique: true
         },
         // define a password column
         password: {
             type: DataTypes.STRING,
             allowNull: false,
+            unique: true,
             validate: {
                 // password must be at least 4 characters
                 len: [4]
