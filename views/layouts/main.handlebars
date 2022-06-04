@@ -11,11 +11,12 @@
     <div class="wrapper">
         <header>
             <nav>
+                <a href="/" class="list-item">Home</a>
                 {{#if loggedIn}}
-                <a href="/dashboard">dashboard</a>
-                <button id="logout" class="btn-no-style">logout</button>
+                <a href="/dashboard" class="list-item">Dashboard</a>
+                <button id="logout" class="list-item">Logout</button>
                 {{else}}
-                <a href="/login">login</a>
+                <a href="/login" class="list-item">Login</a>
                 {{/if}}
             </nav>
         </header>

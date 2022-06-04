@@ -21,6 +21,10 @@
     line-height: 1.5;
     font-size: 16px;
   }
+
+  header {
+    background-color: var(--dark);
+  }
   
   h1,
   h2,

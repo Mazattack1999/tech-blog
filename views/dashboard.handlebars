@@ -1,6 +1,6 @@
-<h1>Your Dashboard</h1>
+<h1 class="app-title" >Your Dashboard</h1>
 
-<section class="posts">
+<section class="posts list-group">
     {{#each posts as |post|}}
     <div> 
         {{> post-info post }}
@@ -8,4 +8,5 @@
     {{/each}}
 </section>
 
-<button type="button" class="btn">+ New Post</button>
+<a href="/dashboard/new-post" class="btn">+ New Post</a>
+

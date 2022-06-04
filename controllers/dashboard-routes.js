@@ -13,6 +13,7 @@ router.get('/', withAuth, (req, res) => {
         attributes: [
           'id',
           'title',
+          'post_text',
           'created_at'
         ],
         include: [
@@ -39,6 +40,19 @@ router.get('/', withAuth, (req, res) => {
         console.log(err);
         res.status(500).json(err);
     })
+})
+
+// render create new post page
+// /new-post
+router.get('/new-post', withAuth, (req, res) => {
+  const post = {
+    title: "",
+    post_text: ""
+  };
+  res.render('new-post', {
+    post,
+    loggedIn: true
+  })
 })
 
 // allow user to edit post
