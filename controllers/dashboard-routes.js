@@ -3,7 +3,7 @@ const router = require('express').Router();
 const {Post, User, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
-// GET and render all users posts on dashboard
+// GET and render all user's posts on dashboard
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
         where: {
@@ -12,7 +12,6 @@ router.get('/', withAuth, (req, res) => {
         },
         attributes: [
           'id',
-          'post_url',
           'title',
           'created_at'
         ],
@@ -50,7 +49,6 @@ router.get('/edit/:id', withAuth, (req, res) => {
     },
     attributes: [
         'id',
-        'post_url',
         'title',
         'created_at'
     ],
