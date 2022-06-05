@@ -25,26 +25,50 @@
   header {
     background-color: var(--dark);
   }
+
+  /* nav start */
   
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  .nav-el {
+    text-decoration: none;
+    color: var(--secondary);
+    background-color: var(--dark);
+    border: none;
+    font-size: 20px;
+    margin: 3px 10px;
+  }
+  /* nav end */
+
+
+  
+  h1 {
     font-weight: 700;
     margin: 0;
     color: var(--dark);
     line-height: 1.25;
   }
+
+  h2, h3 {
+    font-weight: 700;
+    margin: 0;
+    color: var(--secondary);
+    line-height: 1.25;
+  }
   
   main {
-    margin: 20px auto;
-    width: 94%;
+    /* margin: 20px auto;
+    width: 94%; */
   }
   
   p {
     font-size: 1.2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  footer {
+    margin-top: 20px;
   }
   
    .btn {
@@ -106,6 +130,14 @@
   .hero p {
     max-width: 75%;
   }
+
+  .title-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--dark);
+    margin-bottom: 20px;
+    height: 12vh;
+  }
   
   .app-title {
     font-size: 3rem;
@@ -115,6 +147,7 @@
     display: inline-block;
     border-radius: var(--border-radius);
     box-shadow: 6px 5px var(--light-dark);
+    
   }
   
   .list-group {
@@ -152,12 +185,14 @@
   
   /* CARDS */
   .card {
-    margin: 0 0 20px 0;
+    margin: 0 10px 20px 10px;
     border: 3px solid var(--dark);
     border-radius: var(--border-radius);
   }
   
   .card-header {
+    display: flex;
+    justify-content: space-between;
     color: var(--primary);
     background-color: var(--dark);
     padding: 2.5%;
@@ -180,7 +215,7 @@
     margin: 0 0 0 5px;
   }
   
-  .form-input {
+  .form-input, .form-textarea {
     width: 100%;
     padding: 3%;
     margin: 5px 0;
@@ -188,6 +223,8 @@
     border: 2px solid var(--light-dark);
     border-radius: var(--border-radius);
   }
+
+
   
   /* HEIGHT / WIDTH UTILS */
   .min-100-vh {

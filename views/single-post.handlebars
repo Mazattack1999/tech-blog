@@ -1,4 +1,6 @@
-<h1>The Tech Blog</h1>
+<div class="title-wrapper">
+    <h1 class="app-title">The Tech Blog</h1>
+</div>
 
 <section class="post">
     <div> 
@@ -8,22 +10,25 @@
 
 {{#if loggedIn}}
 <div class="card">
-    <h2 class="card-title">Leave a Comment</h2>
-    <form class="comment-form card-content">
-        <label for "comment-text">Comment:</label>
-        <input type="text" id="post-title" name="comment-text" />
+    <h2 class="card-header">Leave a Comment</h2>
+    <form class="comment-form card-body">
+        <label for="comment-text" class="form-label">Comment:</label>
+        <input type="text" id="post-title" name="comment-text" class="form-input"/>
         <button type="submit" class="btn comment-btn">Post Comment</button>
     </form>
 </div>
-<script src="/javascript/new-comment.js"></script>
 {{/if}}
 
 {{#each post.comments as |comment|}}
 <div class="card">
-    <div class="card-title"></div>
-    <div class="card-content">
+    <div class="card-header"></div>
+    <div class="card-body">
         <p>{{comment_text}}</p>
         <p>- {{user.username}}, {{format_date created_at}}</p>
     </div>
 </div>
 {{/each}}
+
+{{#if loggedIn}}
+<script src="/javascript/new-comment.js"></script>
+{{/if}}
